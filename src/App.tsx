@@ -247,12 +247,14 @@ const AppTechnology = () => {
             "https://i.postimg.cc/26gVCWbM/Whats-App-Image-2026-05-01-at-19-48-40.webp",
             "https://i.postimg.cc/gJ1nGhX7/Whats-App-Image-2026-05-01-at-19-34-45-(4).webp"
           ].map((url, i) => (
-            <div key={i} className="w-full flex-shrink-0 aspect-[9/18] bg-white rounded-3xl overflow-hidden snap-center shadow-xl border border-espresso/10">
+            <div key={i} className="w-full flex-shrink-0 aspect-[9/18] bg-white rounded-3xl overflow-hidden snap-center shadow-2xl border border-espresso/10">
               <img 
                 src={url} 
                 alt={`App Screen ${i + 1}`} 
-                className="w-full h-full object-cover transition-all duration-700 hover:scale-105 brightness-[1.02] contrast-[1.05] saturate-[1.1]"
-                style={{ imageRendering: 'auto' }}
+                className="w-full h-full object-cover transition-opacity duration-300"
+                style={{ 
+                  imageRendering: '-webkit-optimize-contrast',
+                }}
                 referrerPolicy="no-referrer"
               />
             </div>
