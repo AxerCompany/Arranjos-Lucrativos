@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Paleta Elegante e Saturada - Arranjos de Luxo */
+  --color-parchment: #F5EDE6;     /* Creme quente - Fundo geral */
+  --color-terracota: #B85C35;    /* Terracota vivo - Botões/Destaques */
+  --color-malva: #7A3D72;        /* Malva intenso - Badges/Destaque */
+  --color-espresso: #1A0F0C;     /* Mogno escuro - Títulos/Texto */
+  --color-rosewood: #9C8880;     /* Mantido ou Rosewood saturado se necessário */
+  --color-rose-claro: #F0D5C8;   /* Rosé saturado - Cards/Alt seções */
+  --color-lilas-suave: #DCC8DC;  /* Lilás saturado - Tags */
+  --color-terracota-medio: #D4845A; /* Hover/Bordas */
+}
+
+@layer base {
+  body {
+    @apply font-sans text-espresso antialiased bg-parchment;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-espresso;
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s infinite ease-in-out;
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
