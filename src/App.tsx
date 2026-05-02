@@ -231,31 +231,29 @@ const AppTechnology = () => {
           className="flex overflow-x-auto pb-4 md:pb-12 scrollbar-hide snap-x snap-mandatory"
         >
           {[
-            "https://i.postimg.cc/L8gQXKbJ/Whats-App-Image-2026-05-01-at-19-54-26.webp",
-            "https://i.postimg.cc/SNt5BYLz/Whats-App-Image-2026-05-02-at-10-03-50.webp",
-            "https://i.postimg.cc/QC5VCM1f/Whats-App-Image-2026-05-01-at-19-34-42-(1).webp",
-            "https://i.postimg.cc/rsWzspxZ/Whats-App-Image-2026-05-01-at-19-34-43.webp",
-            "https://i.postimg.cc/4xC4nZ3T/Whats-App-Image-2026-05-01-at-20-26-22.webp",
-            "https://i.postimg.cc/zBqVvN0D/Whats-App-Image-2026-05-01-at-20-21-57.webp",
-            "https://i.postimg.cc/hjKfvnpD/Whats-App-Image-2026-05-01-at-20-21-57-(1).webp",
-            "https://i.postimg.cc/85xjTvJH/Whats-App-Image-2026-05-01-at-19-34-44-(2).webp",
-            "https://i.postimg.cc/9Msrc9RL/Whats-App-Image-2026-05-01-at-19-34-44-(3).webp",
-            "https://i.postimg.cc/QtvHj796/Whats-App-Image-2026-05-01-at-19-34-44-(4).webp",
-            "https://i.postimg.cc/kG8DG5Kw/Whats-App-Image-2026-05-01-at-19-48-39.webp",
-            "https://i.postimg.cc/d1gLJCkH/Whats-App-Image-2026-05-01-at-19-34-45-(1).webp",
-            "https://i.postimg.cc/Px0PdDpV/Whats-App-Image-2026-05-01-at-19-34-45-(2).webp",
-            "https://i.postimg.cc/26gVCWbM/Whats-App-Image-2026-05-01-at-19-48-40.webp",
-            "https://i.postimg.cc/gJ1nGhX7/Whats-App-Image-2026-05-01-at-19-34-45-(4).webp"
+            "/attachments/65e8a7ea-31be-4977-987d-1c3905e96a41", // 8. Splash
+            "/attachments/b8cff413-5874-4b55-a0ad-467262fcecc7", // 11. Dash 1
+            "/attachments/a7e37eb4-c992-411a-826c-d2b38f88831b", // 12. Dash 2
+            "/attachments/9725f161-d703-455b-b938-16e537e72561", // 13. Models 1
+            "/attachments/636dd8e4-84d4-486a-8b1e-b83445e998eb", // 14. Models 2
+            "/attachments/e31f0e4b-9706-4da5-9b25-0d05051e938f", // 6. Calc Mats
+            "/attachments/d2e1329c-6b3a-4e6a-8b82-73600f135b34", // 5. Calc Price
+            "/attachments/9ef488d5-be45-420a-8bf8-be9090b4ad23", // 17. Guide
+            "/attachments/a9b89569-42da-4f36-be86-cc2e4726d36e", // 1. Textos
+            "/attachments/2f3a695b-11c9-4a0b-80a5-296bc89178bf", // 7. Divulg 1
+            "/attachments/3a290547-fc9e-4735-8663-8d6bd06c4b22", // 10. Divulg 2
+            "/attachments/f497da93-ca2d-45fc-9aab-9076046e7f8e", // 9. Contrato
+            "/attachments/6d7e974f-c00f-48d6-a249-ae9ceb80bbbd", // 2. Alugar
+            "/attachments/b282ca0e-4365-4f33-b4cd-cc5e3245f7c3", // 3. Checklist
+            "/attachments/fbe776e6-9952-4752-9657-f3162fb41890", // 4. Kit
+            "/attachments/f376f9ef-0275-4d76-86ec-35222efed621", // 15. Calc Empty 1
+            "/attachments/86c673eb-e95e-445a-9407-7bc56ef45bd0"  // 16. Calc Empty 2
           ].map((url, i) => (
             <div key={i} className="w-full flex-shrink-0 aspect-[9/18] bg-white rounded-3xl overflow-hidden snap-center shadow-2xl border border-espresso/10">
               <img 
                 src={url} 
                 alt={`App Screen ${i + 1}`} 
-                className="w-full h-full object-cover transition-opacity duration-300 brightness-90 contrast-[1.3] saturate-[1.1]"
-                style={{ 
-                  imageRendering: '-webkit-optimize-contrast',
-                }}
-                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover transition-opacity duration-300"
               />
             </div>
           ))}
@@ -455,8 +453,7 @@ const Results = () => {
                 <img 
                   src={url} 
                   alt={`Arranjo Exemplo ${i + 1}`} 
-                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-700 contrast-[1.1] brightness-[1.05]"
-                  style={{ imageRendering: '-webkit-optimize-contrast' }}
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
               </div>
