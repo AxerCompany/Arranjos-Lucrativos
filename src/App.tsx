@@ -232,7 +232,7 @@ const AppTechnology = () => {
         >
           {[
             "https://i.postimg.cc/L8gQXKbJ/Whats-App-Image-2026-05-01-at-19-54-26.webp",
-            "https://i.postimg.cc/gjRrj08N/Whats-App-Image-2026-05-01-at-19-34-42.webp",
+            "https://i.postimg.cc/SNt5BYLz/Whats-App-Image-2026-05-02-at-10-03-50.webp",
             "https://i.postimg.cc/QC5VCM1f/Whats-App-Image-2026-05-01-at-19-34-42-(1).webp",
             "https://i.postimg.cc/rsWzspxZ/Whats-App-Image-2026-05-01-at-19-34-43.webp",
             "https://i.postimg.cc/4xC4nZ3T/Whats-App-Image-2026-05-01-at-20-26-22.webp",
@@ -251,7 +251,7 @@ const AppTechnology = () => {
               <img 
                 src={url} 
                 alt={`App Screen ${i + 1}`} 
-                className="w-full h-full object-cover transition-opacity duration-300"
+                className="w-full h-full object-cover transition-opacity duration-300 brightness-90 contrast-[1.3] saturate-[1.1]"
                 style={{ 
                   imageRendering: '-webkit-optimize-contrast',
                 }}
@@ -455,7 +455,8 @@ const Results = () => {
                 <img 
                   src={url} 
                   alt={`Arranjo Exemplo ${i + 1}`} 
-                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-700 contrast-[1.1] brightness-[1.05]"
+                  style={{ imageRendering: '-webkit-optimize-contrast' }}
                   referrerPolicy="no-referrer"
                 />
               </div>
