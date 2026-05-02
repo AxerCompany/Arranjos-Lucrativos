@@ -231,6 +231,7 @@ const AppTechnology = () => {
           className="flex overflow-x-auto pb-4 md:pb-12 scrollbar-hide snap-x snap-mandatory"
         >
           {[
+            "https://i.postimg.cc/SK6Yx7YV/Screenshot-2026-05-02-17-11-38-905-com-android-chrome.webp",
             "https://i.postimg.cc/rmw23MSY/Screenshot-2026-05-02-14-58-05-374-com-android-chrome.webp",
             "https://i.postimg.cc/x1NCpy0R/Screenshot-2026-05-02-12-56-26-478-com-android-chrome.webp",
             "https://i.postimg.cc/yxf9NZsR/Whats-App-Image-2026-05-01-at-19-34-42.webp",
