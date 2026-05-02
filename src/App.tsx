@@ -208,7 +208,7 @@ const AppTechnology = () => {
         </div>
       </div>
       
-      <div className="max-w-[320px] md:max-w-[400px] mx-auto relative group px-4">
+      <div className="max-w-[380px] md:max-w-[480px] mx-auto relative group px-4">
         {/* Navigation Arrows */}
         <button 
           onClick={() => scroll('left')}
@@ -231,35 +231,31 @@ const AppTechnology = () => {
           className="flex overflow-x-auto pb-4 md:pb-12 scrollbar-hide snap-x snap-mandatory"
         >
           {[
-            "https://i.postimg.cc/SK6Yx7YV/Screenshot-2026-05-02-17-11-38-905-com-android-chrome.webp",
-            "https://i.postimg.cc/rmw23MSY/Screenshot-2026-05-02-14-58-05-374-com-android-chrome.webp",
-            "https://i.postimg.cc/x1NCpy0R/Screenshot-2026-05-02-12-56-26-478-com-android-chrome.webp",
-            "https://i.postimg.cc/yxf9NZsR/Whats-App-Image-2026-05-01-at-19-34-42.webp",
-            "https://i.postimg.cc/YqhL3jpr/image.webp",
-            "https://i.postimg.cc/L8gQXKbJ/Whats-App-Image-2026-05-01-at-19-54-26.webp",
-            "https://i.postimg.cc/gjRrj08N/Whats-App-Image-2026-05-01-at-19-34-42.webp",
-            "https://i.postimg.cc/QC5VCM1f/Whats-App-Image-2026-05-01-at-19-34-42-(1).webp",
-            "https://i.postimg.cc/rsWzspxZ/Whats-App-Image-2026-05-01-at-19-34-43.webp",
-            "https://i.postimg.cc/4xC4nZ3T/Whats-App-Image-2026-05-01-at-20-26-22.webp",
-            "https://i.postimg.cc/zBqVvN0D/Whats-App-Image-2026-05-01-at-20-21-57.webp",
-            "https://i.postimg.cc/hjKfvnpD/Whats-App-Image-2026-05-01-at-20-21-57-(1).webp",
-            "https://i.postimg.cc/85xjTvJH/Whats-App-Image-2026-05-01-at-19-34-44-(2).webp",
-            "https://i.postimg.cc/9Msrc9RL/Whats-App-Image-2026-05-01-at-19-34-44-(3).webp",
-            "https://i.postimg.cc/QtvHj796/Whats-App-Image-2026-05-01-at-19-34-44-(4).webp",
-            "https://i.postimg.cc/kG8DG5Kw/Whats-App-Image-2026-05-01-at-19-48-39.webp",
-            "https://i.postimg.cc/d1gLJCkH/Whats-App-Image-2026-05-01-at-19-34-45-(1).webp",
-            "https://i.postimg.cc/Px0PdDpV/Whats-App-Image-2026-05-01-at-19-34-45-(2).webp",
-            "https://i.postimg.cc/26gVCWbM/Whats-App-Image-2026-05-01-at-19-48-40.webp",
-            "https://i.postimg.cc/gJ1nGhX7/Whats-App-Image-2026-05-01-at-19-34-45-(4).webp"
+            "https://i.postimg.cc/yxCyQX3K/Screenshot-2026-05-02-18-41-39-916-com-android-chrome.webp",
+            "https://i.postimg.cc/TwDcJH1h/Screenshot-2026-05-02-17-34-55-074-com-android-chrome.webp",
+            "https://i.postimg.cc/DZXcPY08/Screenshot-2026-05-02-17-35-03-646-com-android-chrome.webp",
+            "https://i.postimg.cc/DZXcPY08/Screenshot-2026-05-02-17-35-03-646-com-android-chrome.webp",
+            "https://i.postimg.cc/DZXcPY0v/Screenshot-2026-05-02-17-35-11-455-com-android-chrome.webp",
+            "https://i.postimg.cc/vBVvtSTH/Screenshot-2026-05-02-17-37-48-687-com-android-chrome.webp",
+            "https://i.postimg.cc/fL9vfgyw/Screenshot-2026-05-02-17-38-01-209-com-android-chrome.webp",
+            "https://i.postimg.cc/k4byvhG7/Screenshot-2026-05-02-17-38-11-620-com-android-chrome.webp",
+            "https://i.postimg.cc/4yRQLbHs/Screenshot-2026-05-02-17-53-50-196-com-android-chrome.webp",
+            "https://i.postimg.cc/FRLxVnz4/Screenshot-2026-05-02-17-38-22-957-com-android-chrome.webp",
+            "https://i.postimg.cc/1tqKrYtk/Screenshot-2026-05-02-17-38-32-870-com-android-chrome.webp",
+            "https://i.postimg.cc/DZXcPY0V/Screenshot-2026-05-02-17-38-45-463-com-android-chrome.webp",
+            "https://i.postimg.cc/Xq6kHcBj/Screenshot-2026-05-02-17-38-54-672-com-android-chrome.webp",
+            "https://i.postimg.cc/cCGB9Mt1/Screenshot-2026-05-02-17-39-06-173-com-android-chrome.webp"
           ].map((url, i) => (
-            <div key={i} className="w-full flex-shrink-0 aspect-[9/18] bg-white rounded-3xl overflow-hidden snap-center shadow-xl border border-espresso/10">
-              <img 
-                src={url} 
-                alt={`App Screen ${i + 1}`} 
-                className="w-full h-full object-cover transition-all duration-700 hover:scale-105 brightness-[1.02] contrast-[1.05] saturate-[1.1]"
-                style={{ imageRendering: 'auto' }}
-                referrerPolicy="no-referrer"
-              />
+            <div key={i} className="w-full flex-shrink-0 aspect-[9/18.5] bg-white rounded-xl overflow-hidden snap-center shadow-2xl border border-espresso/10">
+              <div className="w-full h-full relative overflow-hidden">
+                <img 
+                  src={url} 
+                  alt={`App Screen ${i + 1}`} 
+                  className="absolute inset-0 w-full h-[112%] object-cover -top-[10%] transition-all duration-700 brightness-[1.02] contrast-[1.05] saturate-[1.1]"
+                  style={{ imageRendering: 'auto' }}
+                  referrerPolicy="no-referrer"
+                />
+              </div>
             </div>
           ))}
         </div>
