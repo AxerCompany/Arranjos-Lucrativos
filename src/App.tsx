@@ -208,7 +208,7 @@ const AppTechnology = () => {
         </div>
       </div>
       
-      <div className="max-w-[300px] md:max-w-[320px] mx-auto relative group px-4">
+      <div className="max-w-[320px] md:max-w-[400px] mx-auto relative group px-4">
         {/* Navigation Arrows */}
         <button 
           onClick={() => scroll('left')}
