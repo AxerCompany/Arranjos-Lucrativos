@@ -208,11 +208,11 @@ const AppTechnology = () => {
         </div>
       </div>
       
-      <div className="max-w-[320px] md:max-w-[400px] mx-auto relative group px-4">
+      <div className="max-w-[350px] md:max-w-[420px] mx-auto relative group px-10 md:px-0">
         {/* Navigation Arrows */}
         <button 
           onClick={() => scroll('left')}
-          className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-espresso hover:text-terracota transition-all duration-300 border border-espresso/5 hidden md:flex"
+          className="absolute left-0 md:-left-12 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white shadow-lg flex items-center justify-center text-espresso hover:text-terracota transition-all duration-300 border border-espresso/5"
           aria-label="Anterior"
         >
           <ChevronLeft className="w-5 h-5" />
@@ -220,7 +220,7 @@ const AppTechnology = () => {
         
         <button 
           onClick={() => scroll('right')}
-          className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-espresso hover:bg-terracota hover:text-white transition-all duration-300 border border-espresso/5 hidden md:flex"
+          className="absolute right-0 md:-right-12 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white shadow-lg flex items-center justify-center text-espresso hover:bg-terracota hover:text-white transition-all duration-300 border border-espresso/5"
           aria-label="Próximo"
         >
           <ChevronRight className="w-5 h-5" />
@@ -246,12 +246,14 @@ const AppTechnology = () => {
             "https://i.postimg.cc/Xq6kHcBj/Screenshot-2026-05-02-17-38-54-672-com-android-chrome.webp",
             "https://i.postimg.cc/cCGB9Mt1/Screenshot-2026-05-02-17-39-06-173-com-android-chrome.webp"
           ].map((url, i) => (
-            <div key={i} className="w-full flex-shrink-0 aspect-[9/20] bg-white rounded-xl overflow-hidden snap-center shadow-2xl border border-espresso/10">
+            <div key={i} className="w-full flex-shrink-0 aspect-[9/19] bg-white rounded-xl overflow-hidden snap-center shadow-2xl border border-espresso/10">
               <div className="w-full h-full relative overflow-hidden">
                 <img 
-                  src={url} 
-                  alt={`App Screen ${i + 1}`} 
-                  className="absolute inset-0 w-full h-[114%] object-cover -top-[12%] transition-all duration-700 brightness-[1.02] contrast-[1.05] saturate-[1.1]"
+                   src={url} 
+                   alt={`App Screen ${i + 1}`} 
+                   className={`absolute inset-0 w-full object-cover transition-all duration-700 brightness-[1.02] contrast-[1.05] saturate-[1.1] ${
+                     i === 0 ? 'h-[115%] -top-[14%]' : 'h-[106%] -top-[5%]'
+                   }`}
                   style={{ imageRendering: 'auto' }}
                   referrerPolicy="no-referrer"
                 />
