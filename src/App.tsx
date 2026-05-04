@@ -99,19 +99,21 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="relative aspect-[9/16] max-w-[320px] mx-auto bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-espresso/5 group cursor-pointer"
+          className="relative aspect-[9/16] max-w-[320px] mx-auto bg-black rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-espresso/10 group cursor-pointer"
           onClick={() => setIsPlaying(true)}
         >
           {!isPlaying ? (
             <>
               <img 
-                src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=800&auto=format&fit=crop" 
-                alt="Thumbnail do Arranjo" 
-                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+                src="https://i.postimg.cc/TwDcJH1h/Screenshot-2026-05-02-17-34-55-074-com-android-chrome.webp" 
+                alt="Visualização do Aplicativo" 
+                className="w-full h-full object-cover transition-opacity duration-500 scale-[1.02]"
+                style={{ objectPosition: 'top' }}
                 referrerPolicy="no-referrer"
               />
+              <div className="absolute inset-0 bg-espresso/5 group-hover:bg-transparent transition-colors duration-300" />
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-                <div className="w-16 h-16 bg-white/90 backdrop-blur-md text-espresso rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-white/95 backdrop-blur-md text-espresso rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                   <Play className="fill-current w-6 h-6 ml-1" />
                 </div>
                 <motion.div
@@ -125,7 +127,7 @@ const Hero = () => {
             </>
           ) : (
             <iframe
-              src="https://player.vimeo.com/video/1173769301?h=0&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1"
+              src="https://player.vimeo.com/video/1189193393?h=0&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=0"
               className="absolute inset-0 w-full h-full"
               allow="autoplay; fullscreen; picture-in-picture"
               title="Mini VSL"
