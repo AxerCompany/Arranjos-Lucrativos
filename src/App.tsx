@@ -617,11 +617,11 @@ const Pricing = () => {
 
       <div className="max-w-xl mx-auto px-6 text-center relative z-10">
         <div className="mb-8">
-          <h2 className="text-2xl md:text-3xl font-medium uppercase mb-2">Arranjos Lucrativos</h2>
-          <span className="text-[10px] font-black tracking-[0.3em] uppercase text-malva bg-white/5 px-4 py-2 rounded-full border border-white/10 inline-block mb-8">
+          <h2 className="text-2xl md:text-3xl font-medium uppercase mb-2 text-terracota">Arranjos Lucrativos</h2>
+          <span className="text-[10px] font-black tracking-[0.3em] uppercase text-terracota bg-white/5 px-4 py-2 rounded-full border border-white/10 inline-block mb-8">
             OFERTA EXCLUSIVA • VAGAS LIMITADAS
           </span>
-          <p className="text-malva text-xs font-bold tracking-widest uppercase">ACESSO VITALÍCIO + BÔNUS</p>
+          <p className="text-terracota text-xs font-bold tracking-widest uppercase">ACESSO VITALÍCIO + BÔNUS</p>
         </div>
 
         <div className="group relative bg-white/5 border border-white/10 rounded-2xl p-8 mb-8 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-terracota/5">
