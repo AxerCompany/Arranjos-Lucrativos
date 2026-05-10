@@ -509,110 +509,107 @@ const WhatYouGet = () => (
         </p>
       </div>
 
-      <div className="space-y-16">
-        {/* Bonus 1 - Super Bonus */}
-        <div className="group relative">
-          <div className="absolute -inset-1 bg-gradient-to-r from-terracota to-white rounded-[2.5rem] blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200" />
-          <div className="relative bg-white p-8 md:p-12 rounded-[2.5rem] border border-white/10 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-500">
-            <div className="flex flex-col items-center text-center gap-8">
-              <div className="flex-1 w-full">
-                <div className="flex items-center justify-center gap-3 mb-6">
-                  <span className="bg-terracota text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
-                    BÔNUS 01
-                  </span>
-                  <span className="text-malva text-[9px] font-black uppercase tracking-widest animate-pulse">
-                    🔥 SUPER BÔNUS
-                  </span>
-                </div>
-                
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight text-espresso">
-                  COMO CONSEGUIR CLIENTES<br />PRONTOS PARA COMPRAR
-                </h3>
-                
-                <p className="text-espresso/70 text-sm md:text-base mb-8 leading-relaxed max-w-xl mx-auto">
-                  Não adianta ter arranjos lindos se ninguém compra. Aqui você aprende exatamente como atrair, conversar e fechar suas primeiras vendas.
-                </p>
+      <div className="grid gap-12">
+        {[
+          {
+            tag: "BÔNUS 01",
+            emoji: "🎁",
+            title: "COMO CONSEGUIR CLIENTES TODOS OS DIAS",
+            desc: "Não adianta ter arranjos lindos se ninguém compra. Aqui você aprende exatamente como atrair pessoas interessadas e transformar conversas em vendas.",
+            items: [
+              "Onde encontrar clientes prontos para comprar",
+              "Como divulgar mesmo sem seguidores",
+              "O que postar para gerar pedidos",
+              "Como vender pelo WhatsApp",
+              "Como fazer clientes indicarem você"
+            ],
+            value: "R$ 197",
+            isSuper: true
+          },
+          {
+            tag: "BÔNUS 02",
+            emoji: "🚀",
+            title: "GUIA: SUA PRIMEIRA VENDA EM ATÉ 7 DIAS",
+            desc: "Um passo a passo simples pra você sair do zero e fazer sua primeira venda o mais rápido possível.",
+            items: [
+              "Quais arranjos vender primeiro",
+              "Como começar gastando pouco",
+              "Estratégia simples pra conseguir os primeiros pedidos",
+              "Como recuperar o investimento rápido",
+              "O que fazer nos primeiros 7 dias"
+            ],
+            value: "R$ 97"
+          },
+          {
+            tag: "BÔNUS 03",
+            emoji: "🌸",
+            title: "GUIA COMPLETO DE MONTAGEM DOS ARRANJOS",
+            desc: "Mesmo sem experiência, você vai conseguir montar arranjos bonitos e lucrativos seguindo o passo a passo completo.",
+            items: [
+              "Guia de montagem detalhado",
+              "Como combinar flores e materiais",
+              "Estruturas mais usadas nos arranjos",
+              "Técnicas simples para deixar mais profissional",
+              "Como montar mesmo começando do zero"
+            ],
+            value: "R$ 147"
+          }
+        ].map((bonus, idx) => (
+          <div key={idx} className="group relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-terracota to-white rounded-[2.5rem] blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200" />
+            <div className="relative bg-white p-8 md:p-12 rounded-[2.5rem] border border-white/10 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-500">
+              <div className="flex flex-col items-center text-center gap-8">
+                <div className="flex-1 w-full">
+                  <div className="flex items-center justify-center gap-3 mb-6">
+                    <span className="bg-terracota text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
+                      {bonus.tag}
+                    </span>
+                    {bonus.isSuper && (
+                      <span className="text-malva text-[9px] font-black uppercase tracking-widest animate-pulse">
+                        🔥 SUPER BÔNUS
+                      </span>
+                    )}
+                  </div>
+                  
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight text-espresso uppercase">
+                    {bonus.emoji} {bonus.title}
+                  </h3>
+                  
+                  <p className="text-espresso/70 text-sm md:text-base mb-8 leading-relaxed max-w-xl mx-auto">
+                    {bonus.desc}
+                  </p>
 
-                <div className="flex flex-col gap-4 mb-8 max-w-md mx-auto">
-                  {[
-                    "Onde encontrar clientes que já estão procurando",
-                    "Como divulgar sem precisar de seguidores",
-                    "O que postar para gerar interesse imediato",
-                    "Como fechar vendas pelo WhatsApp",
-                    "Como fazer o cliente voltar a comprar"
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <div className="w-5 h-5 rounded-full bg-terracota/10 flex items-center justify-center shrink-0">
-                        <Check className="w-3 h-3 text-terracota" />
+                  <div className="flex flex-col gap-4 mb-10 max-w-md mx-auto">
+                    {bonus.items.map((item, i) => (
+                      <div key={i} className="flex items-center gap-3">
+                        <div className="w-5 h-5 rounded-full bg-terracota/10 flex items-center justify-center shrink-0">
+                          <Check className="w-3 h-3 text-terracota" />
+                        </div>
+                        <p className="text-espresso/70 text-xs md:text-sm text-left font-medium">{item}</p>
                       </div>
-                      <p className="text-espresso/70 text-xs md:text-sm text-left">{item}</p>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
 
-                <div className="inline-flex items-center gap-3 px-4 py-2 bg-parchment rounded-xl border border-espresso/5">
-                  <span className="text-espresso/30 text-[10px] line-through uppercase tracking-widest">Valor: R$ 197,00</span>
-                  <span className="text-terracota text-[10px] font-black uppercase tracking-widest">Hoje: Grátis</span>
+                  <div className="flex flex-col items-center gap-6">
+                    <div className="inline-flex items-center gap-3 px-4 py-2 bg-parchment rounded-xl border border-espresso/5">
+                      <span className="text-espresso/30 text-[10px] line-through uppercase tracking-widest">Valor: {bonus.value}</span>
+                      <span className="text-terracota text-[10px] font-black uppercase tracking-widest">Hoje: Grátis</span>
+                    </div>
+
+                    {idx >= 1 && (
+                      <button 
+                        onClick={() => handleRedirect(CHECKOUT_URL)}
+                        className="w-full max-w-sm bg-terracota hover:bg-terracota/90 text-white font-black py-4 rounded-xl transition-all shadow-lg shadow-terracota/20 uppercase italic tracking-tight"
+                      >
+                        Garantir Meus Bônus
+                      </button>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Bonus 2 */}
-        <div className="group relative">
-          <div className="absolute -inset-1 bg-gradient-to-r from-terracota to-white rounded-[2.5rem] blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200" />
-          <div className="relative bg-white p-8 md:p-12 rounded-[2.5rem] border border-white/10 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-500">
-            <div className="flex flex-col items-center text-center gap-8">
-              <div className="flex-1 w-full">
-                <div className="flex items-center justify-center gap-3 mb-6">
-                  <span className="bg-terracota text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
-                    BÔNUS 02
-                  </span>
-                </div>
-                
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight text-espresso">
-                  GUIA: COMO FAZER SUA PRIMEIRA VENDA EM ATÉ 7 DIAS
-                </h3>
-                
-                <p className="text-espresso/70 text-sm md:text-base mb-8 leading-relaxed max-w-xl mx-auto">
-                  Se você quer começar e ver dinheiro entrando rápido, esse guia mostra exatamente o que fazer do início até a primeira venda.
-                </p>
-
-                <div className="flex flex-col gap-4 mb-8 max-w-md mx-auto">
-                  {[
-                    "Escolha dos arranjos mais fáceis de vender",
-                    "Onde comprar gastando pouco",
-                    "Montagem prática do primeiro arranjo",
-                    "Fotos simples que geram interesse",
-                    "Como divulgar e fechar os primeiros pedidos"
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <div className="w-5 h-5 rounded-full bg-terracota/10 flex items-center justify-center shrink-0">
-                        <Check className="w-3 h-3 text-terracota" />
-                      </div>
-                      <p className="text-espresso/70 text-xs md:text-sm text-left">{item}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="inline-flex items-center gap-3 px-4 py-2 bg-parchment rounded-xl border border-espresso/5 mb-8">
-                  <span className="text-espresso/30 text-[10px] line-through uppercase tracking-widest">Valor: R$ 97,00</span>
-                  <span className="text-terracota text-[10px] font-black uppercase tracking-widest">Hoje: Grátis</span>
-                </div>
-
-                <div className="mt-4">
-                  <button 
-                    onClick={() => handleRedirect(CHECKOUT_URL)}
-                    className="w-full bg-terracota hover:bg-terracota/90 text-white font-black py-4 rounded-xl transition-all shadow-lg shadow-terracota/20 uppercase italic tracking-tight"
-                  >
-                    Garantir Meus Bônus
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
