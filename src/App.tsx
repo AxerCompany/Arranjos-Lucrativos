@@ -38,7 +38,7 @@ import { motion, AnimatePresence } from 'motion/react';
 
 // --- Artisanal Components ---
 
-const CHECKOUT_URL = 'https://pay.wiapy.com/qEj50axiGA';
+const CHECKOUT_URL = 'https://pay.wiapy.com/6a00e01f83bc55dd2a5cf0c2';
 
 const handleRedirect = (url: string) => {
   const search = window.location.search;
@@ -56,12 +56,6 @@ const Navbar = () => (
       <div className="flex items-center gap-2">
         <span className="font-black text-xl tracking-tight uppercase text-espresso">Arranjos<span className="text-terracota">Lucrativos</span></span>
       </div>
-      <button 
-        onClick={() => handleRedirect(CHECKOUT_URL)}
-        className="bg-espresso text-white text-[10px] font-bold py-2 px-5 rounded-full hover:bg-espresso/80 transition-colors uppercase tracking-wider"
-      >
-        Acessar
-      </button>
     </div>
   </nav>
 );
@@ -96,20 +90,6 @@ const Hero = () => {
         >
           Assista ao vídeo abaixo e descubra como o aplicativo mostra quais arranjos montar, quais flores usar e quanto você pode lucrar.
         </motion.p>
-
-        <motion.div
-           initial={{ opacity: 0, y: 10 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ delay: 0.25 }}
-           className="mb-12"
-        >
-          <button 
-            onClick={() => handleRedirect(CHECKOUT_URL)}
-            className="bg-terracota hover:bg-terracota/90 text-white font-black py-4 px-10 rounded-xl transition-all shadow-lg shadow-terracota/20 uppercase italic tracking-tight"
-          >
-            Quero começar agora
-          </button>
-        </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -595,15 +575,6 @@ const WhatYouGet = () => (
                       <span className="text-espresso/30 text-[10px] line-through uppercase tracking-widest">Valor: {bonus.value}</span>
                       <span className="text-terracota text-[10px] font-black uppercase tracking-widest">Hoje: Grátis</span>
                     </div>
-
-                    {idx >= 1 && (
-                      <button 
-                        onClick={() => handleRedirect(CHECKOUT_URL)}
-                        className="w-full max-w-sm bg-terracota hover:bg-terracota/90 text-white font-black py-4 rounded-xl transition-all shadow-lg shadow-terracota/20 uppercase italic tracking-tight"
-                      >
-                        Garantir Meus Bônus
-                      </button>
-                    )}
                   </div>
                 </div>
               </div>
