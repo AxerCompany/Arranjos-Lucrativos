@@ -38,9 +38,11 @@ import { motion, AnimatePresence } from 'motion/react';
 
 // --- Artisanal Components ---
 
+const CHECKOUT_URL = 'https://pay.wiapy.com/qEj50axiGA';
+
 const handleRedirect = (url: string) => {
   const search = window.location.search;
-  if (search) {
+  if (search && url !== '#') {
     const separator = url.includes('?') ? '&' : '?';
     window.location.href = url + separator + search.substring(1);
   } else {
@@ -55,7 +57,7 @@ const Navbar = () => (
         <span className="font-black text-xl tracking-tight uppercase text-espresso">Arranjos<span className="text-terracota">Lucrativos</span></span>
       </div>
       <button 
-        onClick={() => handleRedirect('#')}
+        onClick={() => handleRedirect(CHECKOUT_URL)}
         className="bg-espresso text-white text-[10px] font-bold py-2 px-5 rounded-full hover:bg-espresso/80 transition-colors uppercase tracking-wider"
       >
         Acessar
@@ -90,10 +92,24 @@ const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-espresso/80 text-xs md:text-base font-bold max-w-2xl mx-auto mb-10 md:mb-16 leading-relaxed"
+          className="text-espresso/80 text-xs md:text-base font-bold max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed"
         >
           Assista ao vídeo abaixo e descubra como o aplicativo mostra quais arranjos montar, quais flores usar e quanto você pode lucrar.
         </motion.p>
+
+        <motion.div
+           initial={{ opacity: 0, y: 10 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.25 }}
+           className="mb-12"
+        >
+          <button 
+            onClick={() => handleRedirect(CHECKOUT_URL)}
+            className="bg-terracota hover:bg-terracota/90 text-white font-black py-4 px-10 rounded-xl transition-all shadow-lg shadow-terracota/20 uppercase italic tracking-tight"
+          >
+            Quero começar agora
+          </button>
+        </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -580,9 +596,18 @@ const WhatYouGet = () => (
                   ))}
                 </div>
 
-                <div className="inline-flex items-center gap-3 px-4 py-2 bg-parchment rounded-xl border border-espresso/5">
+                <div className="inline-flex items-center gap-3 px-4 py-2 bg-parchment rounded-xl border border-espresso/5 mb-8">
                   <span className="text-espresso/30 text-[10px] line-through uppercase tracking-widest">Valor: R$ 97,00</span>
                   <span className="text-terracota text-[10px] font-black uppercase tracking-widest">Hoje: Grátis</span>
+                </div>
+
+                <div className="mt-4">
+                  <button 
+                    onClick={() => handleRedirect(CHECKOUT_URL)}
+                    className="w-full bg-terracota hover:bg-terracota/90 text-white font-black py-4 rounded-xl transition-all shadow-lg shadow-terracota/20 uppercase italic tracking-tight"
+                  >
+                    Garantir Meus Bônus
+                  </button>
                 </div>
               </div>
             </div>
@@ -682,7 +707,7 @@ const Pricing = () => {
           </div>
 
           <button 
-            onClick={() => handleRedirect('https://pay.wiapy.com/qEj50axiGA')}
+            onClick={() => handleRedirect(CHECKOUT_URL)}
             className="w-full bg-terracota hover:bg-terracota/90 text-white font-black py-5 rounded-xl transition-all flex flex-col items-center justify-center gap-1 uppercase italic tracking-tight animate-pulse-subtle shadow-lg shadow-terracota/20"
           >
             <span className="text-lg flex items-center gap-2"><ShoppingBag className="w-5 h-5" /> LIBERAR MEU ACESSO AGORA</span>
