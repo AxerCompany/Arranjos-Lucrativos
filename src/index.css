@@ -13,6 +13,7 @@
   --color-rose-claro: #F0D5C8;   /* Rosé saturado - Cards/Alt seções */
   --color-lilas-suave: #DCC8DC;  /* Lilás saturado - Tags */
   --color-terracota-medio: #D4845A; /* Hover/Bordas */
+  --color-mogno-profundo: #2C1A16; /* Marrom escuro quente para bônus */
 }
 
 @layer base {

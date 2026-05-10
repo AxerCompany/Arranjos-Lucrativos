@@ -164,9 +164,12 @@ const HowItWorks = () => (
             icon: ArrowUpRight 
           },
         ].map((item, i) => (
-          <div key={i} className="group p-8 bg-white rounded-3xl border border-espresso/5 shadow-sm hover:shadow-md hover:-translate-y-1 hover:border-terracota/30 transition-all duration-300 text-center">
-            <div className="w-16 h-16 bg-espresso/5 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-terracota/10 transition-colors">
-              <item.icon className="w-6 h-6 text-espresso group-hover:text-terracota transition-colors" />
+          <div key={i} className="group p-8 bg-rose-claro rounded-3xl border border-terracota/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center">
+            <span className="block text-terracota font-black text-4xl mb-4 opacity-40 group-hover:opacity-100 transition-opacity">
+              {item.step}
+            </span>
+            <div className="w-16 h-16 bg-terracota rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-terracota/20">
+              <item.icon className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-sm font-bold uppercase tracking-wider mb-3 text-espresso">{item.title}</h3>
             <p className="text-espresso/60 text-sm leading-relaxed">{item.desc}</p>
@@ -467,9 +470,9 @@ const Results = () => {
 };
 
 const WhatYouGet = () => (
-  <section className="py-24 bg-malva overflow-hidden relative">
+  <section className="py-24 bg-mogno-profundo overflow-hidden relative">
     {/* Background Glows (Subtle for light mode) */}
-    <div className="absolute top-0 left-1/4 w-[50%] h-[50%] bg-terracota/10 rounded-full blur-[120px] pointer-events-none" />
+    <div className="absolute top-0 left-1/4 w-[50%] h-[50%] bg-terracota/20 rounded-full blur-[120px] pointer-events-none" />
 
     <div className="max-w-4xl mx-auto px-6 relative z-10">
       <div className="text-center mb-20">
