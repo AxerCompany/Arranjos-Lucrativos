@@ -210,6 +210,10 @@ const AppTechnology = () => {
       </div>
       
       <div className="max-w-[350px] md:max-w-[420px] mx-auto relative group px-10 md:px-0">
+        <p className="text-[10px] text-espresso/40 uppercase font-bold tracking-widest text-center mb-6 animate-pulse">
+          passe para o lado e conheça o app por dentro
+        </p>
+
         {/* Navigation Arrows */}
         <button 
           onClick={() => scroll('left')}
