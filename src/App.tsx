@@ -664,12 +664,14 @@ const Pricing = () => {
           <div className="space-y-3 mb-10 text-left max-w-[280px] mx-auto">
             {[
               "Acesso Completo ao App",
+              "Modelos de arranjos que mais vendem",
               "Modelos de Arranjos de Luxo",
               "Cálculo de Lucro Automático",
               "Textos de Venda Prontos",
               "Garantia Incondicional",
-              "Bônus: Primeiras Vendas",
-              "Bônus: Atrai Clientes VIP",
+              "Bônus: Primeiras Vendas em ate 7 dias",
+              "Bônus: Como conseguir clientes todos dias",
+              "Bônus: Guia completo de montagem dos arranjos",
               "Suporte para Alunas"
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3">
