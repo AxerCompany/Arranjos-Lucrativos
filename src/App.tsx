@@ -340,19 +340,19 @@ const Testimonials = () => (
         {[
           { 
             name: "CARLA SOUZA", 
-            role: "Artesã de Arranjos",
-            image: "https://i.postimg.cc/dVXGbZmW/image_13_229x300_(1).webp",
+            role: "Empreendedora",
+            image: "https://i.postimg.cc/59k1DZZM/images-(11).webp",
             text: "Eu sempre quis trabalhar com flores artificiais, mas tinha medo de ficar cafona. O app me ensinou a fazer arranjos modernos que as pessoas amam comprar." 
           },
           { 
-            name: "RENATA OLIVEIRA", 
-            role: "Ateliê Floral",
-            image: "https://i.postimg.cc/fRFYGSj8/image_14_300x300_(1).webp",
+            name: "ANA PAULA LIMA", 
+            role: "Artesã Iniciante",
+            image: "https://i.postimg.cc/8knDxqqT/images-(12).webp",
             text: "O lucro é maravilhoso porque o material dura muito e não estraga. Fiz minha primeira venda para uma clínica médica na mesma semana." 
           },
           { 
-            name: "ANA PAULA LIMA", 
-            role: "Mãe e Empreendedora",
+            name: "RENATA OLIVEIRA", 
+            role: "Artesã Iniciante",
             image: "https://i.postimg.cc/CKqbSMmc/image_15_300x300_(1)_(1).webp",
             text: "Agora trabalho de casa perto dos meus filhos. O aplicativo me deu a segurança de saber cobrar o preço certo por cada peça que eu crio." 
           },
@@ -733,6 +733,91 @@ const Pricing = () => {
   );
 };
 
+const AboutMentor = () => {
+  return (
+    <section className="py-24 bg-rose-claro/35 relative overflow-hidden border-t border-espresso/5">
+      {/* Subtle details */}
+      <div className="absolute top-10 right-10 w-72 h-72 bg-terracota/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-malva/5 rounded-full blur-3xl pointer-events-none" />
+      
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
+        <div className="grid md:grid-cols-12 gap-12 items-center">
+          
+          {/* Image Column */}
+          <div className="md:col-span-5 flex justify-center">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative group"
+            >
+              {/* Outer decorative borders */}
+              <div className="absolute -inset-4 border border-terracota/20 rounded-2xl transform rotate-3 scale-102 group-hover:rotate-1 transition-transform duration-500 pointer-events-none" />
+              <div className="absolute -inset-4 border border-malva/15 rounded-2xl transform -rotate-3 scale-98 group-hover:rotate-0 transition-transform duration-500 pointer-events-none" />
+              
+              <div className="relative overflow-hidden rounded-2xl shadow-xl aspect-[3/4] w-full max-w-[320px] bg-espresso/5 border border-espresso/10">
+                <img 
+                  src="https://i.postimg.cc/V6KSxKcV/Chat-GPT-Image-1-de-jul-de-2026-16-35-54.webp" 
+                  alt="Patricia Oliveira" 
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Description/Bio Column */}
+          <div className="md:col-span-7 text-center md:text-left space-y-6">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="space-y-3"
+            >
+              <span className="text-terracota text-[11px] font-black tracking-[0.25em] uppercase block">
+                Criadora do Método
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-espresso uppercase italic font-sans">
+                Patricia Oliveira
+              </h2>
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-espresso/80 text-base md:text-lg leading-relaxed font-normal"
+            >
+              Há 25 anos trabalho com arranjos florais e já ajudei milhares de mulheres a saírem do zero com um método simples e prático. Meu objetivo é mostrar que qualquer pessoa pode aprender, vender e transformar essa habilidade em uma renda de verdade — mesmo sem experiência.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="pt-4 flex flex-wrap justify-center md:justify-start gap-4 text-xs font-bold uppercase tracking-wider text-espresso/60"
+            >
+              <div className="flex items-center gap-2 px-4 py-2 bg-espresso/5 rounded-full border border-espresso/5">
+                <div className="w-1.5 h-1.5 rounded-full bg-terracota" />
+                <span>+25 Anos de Experiência</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-espresso/5 rounded-full border border-espresso/5">
+                <div className="w-1.5 h-1.5 rounded-full bg-malva" />
+                <span>Milhares de Alunas</span>
+              </div>
+            </motion.div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const FAQ = () => {
   const [open, setOpen] = useState<number | null>(0);
   const items = [
@@ -843,6 +928,7 @@ export default function App() {
       <Results />
       <WhatYouGet />
       <Pricing />
+      <AboutMentor />
       <FAQ />
       <Footer />
       <FloatingScarcity />
