@@ -164,8 +164,8 @@ const HowItWorks = () => (
             icon: ArrowUpRight 
           },
         ].map((item, i) => (
-          <div key={i} className="group p-8 bg-rose-claro rounded-3xl border border-terracota/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center">
-            <span className="block text-terracota font-black text-4xl mb-4 opacity-40 group-hover:opacity-100 transition-opacity">
+          <div key={i} className="p-8 bg-rose-claro rounded-3xl border border-terracota/10 shadow-sm text-center">
+            <span className="block text-terracota font-black text-4xl mb-4 opacity-80">
               {item.step}
             </span>
             <div className="w-16 h-16 bg-terracota rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-terracota/20">
@@ -210,14 +210,14 @@ const AppTechnology = () => {
       </div>
       
       <div className="max-w-[350px] md:max-w-[420px] mx-auto relative group px-10 md:px-0">
-        <p className="text-[10px] text-espresso/40 uppercase font-bold tracking-widest text-center mb-6 animate-pulse">
+        <p className="text-[10px] text-espresso/40 uppercase font-bold tracking-widest text-center mb-6">
           passe para o lado e conheça o app por dentro
         </p>
 
         {/* Navigation Arrows */}
         <button 
           onClick={() => scroll('left')}
-          className="absolute left-0 md:-left-12 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white shadow-lg flex items-center justify-center text-espresso hover:text-terracota transition-all duration-300 border border-espresso/5"
+          className="absolute left-0 md:-left-12 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white shadow-lg flex items-center justify-center text-espresso hover:text-terracota border border-espresso/5"
           aria-label="Anterior"
         >
           <ChevronLeft className="w-5 h-5" />
@@ -225,7 +225,7 @@ const AppTechnology = () => {
         
         <button 
           onClick={() => scroll('right')}
-          className="absolute right-0 md:-right-12 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white shadow-lg flex items-center justify-center text-espresso hover:bg-terracota hover:text-white transition-all duration-300 border border-espresso/5"
+          className="absolute right-0 md:-right-12 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white shadow-lg flex items-center justify-center text-espresso hover:bg-terracota hover:text-white border border-espresso/5"
           aria-label="Próximo"
         >
           <ChevronRight className="w-5 h-5" />
@@ -256,7 +256,7 @@ const AppTechnology = () => {
                 <img 
                    src={url} 
                    alt={`App Screen ${i + 1}`} 
-                   className={`absolute inset-0 w-full object-cover transition-all duration-700 brightness-[1.02] contrast-[1.05] saturate-[1.1] ${
+                   className={`absolute inset-0 w-full object-cover brightness-[1.02] contrast-[1.05] saturate-[1.1] ${
                      i === 0 ? 'h-[115%] -top-[14%]' : 'h-[106%] -top-[5%]'
                    }`}
                   style={{ imageRendering: 'auto' }}
@@ -309,9 +309,9 @@ const AppTechnology = () => {
           ].map((f, i) => (
             <div 
               key={i} 
-              className={`p-8 bg-white rounded-3xl border border-espresso/5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${i === 3 || i === 4 ? 'lg:col-span-1' : ''}`}
+              className={`p-8 bg-white rounded-3xl border border-espresso/5 shadow-sm ${i === 3 || i === 4 ? 'lg:col-span-1' : ''}`}
             >
-              <div className="w-12 h-12 bg-terracota/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 bg-terracota/10 rounded-2xl flex items-center justify-center mb-6">
                 <f.icon className="w-6 h-6 text-terracota" />
               </div>
               <h4 className="font-bold text-espresso text-lg mb-3 leading-tight">{f.title}</h4>
@@ -363,7 +363,7 @@ const Testimonials = () => (
             text: "Pra quem busca renda extra é o melhor caminho. O app já dá o script de venda pronto. Eu só monto e entrego as encomendas que recebo." 
           },
         ].map((t, i) => (
-          <div key={i} className="p-8 bg-white rounded-2xl border border-terracota/20 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <div key={i} className="p-8 bg-white rounded-2xl border border-terracota/20 shadow-sm">
             <div className="flex gap-1 mb-6">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-terracota text-terracota" />
@@ -422,7 +422,7 @@ const Results = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={() => scroll('left')}
-            className="absolute -left-4 md:left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-espresso hover:bg-terracota hover:text-white transition-all duration-300 border border-espresso/5"
+            className="absolute -left-4 md:left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-espresso hover:bg-terracota hover:text-white border border-espresso/5"
             aria-label="Anterior"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -430,7 +430,7 @@ const Results = () => {
           
           <button 
             onClick={() => scroll('right')}
-            className="absolute -right-4 md:right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-espresso hover:bg-terracota hover:text-white transition-all duration-300 border border-espresso/5"
+            className="absolute -right-4 md:right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-espresso hover:bg-terracota hover:text-white border border-espresso/5"
             aria-label="Próximo"
           >
             <ChevronRight className="w-5 h-5" />
@@ -461,7 +461,7 @@ const Results = () => {
                 <img 
                   src={url} 
                   alt={`Arranjo Exemplo ${i + 1}`} 
-                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -542,9 +542,9 @@ const WhatYouGet = () => (
             value: "R$ 147"
           }
         ].map((bonus, idx) => (
-          <div key={idx} className="group relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-terracota to-white rounded-[2.5rem] blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200" />
-            <div className="relative bg-white p-8 md:p-12 rounded-[2.5rem] border border-white/10 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-500">
+          <div key={idx} className="relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-terracota to-white rounded-[2.5rem] blur opacity-10 pointer-events-none" />
+            <div className="relative bg-white p-8 md:p-12 rounded-[2.5rem] border border-white/10 shadow-xl">
               <div className="flex flex-col items-center text-center gap-8">
                 <div className="flex-1 w-full">
                   <div className="flex items-center justify-center gap-3 mb-6">
@@ -552,7 +552,7 @@ const WhatYouGet = () => (
                       {bonus.tag}
                     </span>
                     {bonus.isSuper && (
-                      <span className="text-malva text-[9px] font-black uppercase tracking-widest animate-pulse">
+                      <span className="text-malva text-[9px] font-black uppercase tracking-widest">
                         🔥 SUPER BÔNUS
                       </span>
                     )}
@@ -624,8 +624,8 @@ const Pricing = () => {
           <p className="text-terracota text-xs font-bold tracking-widest uppercase">ACESSO VITALÍCIO + BÔNUS</p>
         </div>
 
-        <div className="group relative bg-white/5 border border-white/10 rounded-2xl p-8 mb-8 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-terracota/5">
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-terracota/20 to-malva/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
+        <div className="relative bg-white/5 border border-white/10 rounded-2xl p-8 mb-8 backdrop-blur-sm">
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-terracota/20 to-malva/20 rounded-2xl blur opacity-10 pointer-events-none" />
           <div className="relative">
             <div className="mb-8">
             <p className="text-[10px] font-black tracking-[0.3em] uppercase text-terracota mb-4 flex items-center justify-center gap-2">
@@ -641,10 +641,9 @@ const Pricing = () => {
                 <span className="text-terracota">71%</span>
               </div>
               <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                <motion.div 
-                  initial={{ width: 0 }}
-                  animate={{ width: "71%" }}
+                <div 
                   className="h-full bg-terracota"
+                  style={{ width: "71%" }}
                 />
               </div>
             </div>
@@ -702,10 +701,7 @@ const Pricing = () => {
           <CreditCard className="w-5 h-5" />
         </div>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div 
           className="max-w-2xl mx-auto bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 backdrop-blur-sm"
         >
           <div className="flex flex-col md:flex-row items-center gap-8 text-left">
@@ -727,7 +723,7 @@ const Pricing = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -745,62 +741,38 @@ const AboutMentor = () => {
           
           {/* Image Column */}
           <div className="md:col-span-5 flex justify-center">
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative group"
-            >
+            <div className="relative">
               {/* Outer decorative borders */}
-              <div className="absolute -inset-4 border border-terracota/20 rounded-2xl transform rotate-3 scale-102 group-hover:rotate-1 transition-transform duration-500 pointer-events-none" />
-              <div className="absolute -inset-4 border border-malva/15 rounded-2xl transform -rotate-3 scale-98 group-hover:rotate-0 transition-transform duration-500 pointer-events-none" />
+              <div className="absolute -inset-4 border border-terracota/20 rounded-2xl transform rotate-3 scale-102 pointer-events-none" />
+              <div className="absolute -inset-4 border border-malva/15 rounded-2xl transform -rotate-3 scale-98 pointer-events-none" />
               
               <div className="relative overflow-hidden rounded-2xl shadow-xl aspect-[3/4] w-full max-w-[320px] bg-espresso/5 border border-espresso/10">
                 <img 
                   src="https://i.postimg.cc/V6KSxKcV/Chat-GPT-Image-1-de-jul-de-2026-16-35-54.webp" 
                   alt="Patricia Oliveira" 
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-center"
                   referrerPolicy="no-referrer"
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Description/Bio Column */}
           <div className="md:col-span-7 text-center md:text-left space-y-6">
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="space-y-3"
-            >
+            <div className="space-y-3">
               <span className="text-terracota text-[11px] font-black tracking-[0.25em] uppercase block">
                 Criadora do Método
               </span>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-espresso uppercase italic font-sans">
                 Patricia Oliveira
               </h2>
-            </motion.div>
+            </div>
 
-            <motion.p
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-espresso/80 text-base md:text-lg leading-relaxed font-normal"
-            >
+            <p className="text-espresso/80 text-base md:text-lg leading-relaxed font-normal">
               Há 25 anos trabalho com arranjos florais e já ajudei milhares de mulheres a saírem do zero com um método simples e prático. Meu objetivo é mostrar que qualquer pessoa pode aprender, vender e transformar essa habilidade em uma renda de verdade — mesmo sem experiência.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="pt-4 flex flex-wrap justify-center md:justify-start gap-4 text-xs font-bold uppercase tracking-wider text-espresso/60"
-            >
+            <div className="pt-4 flex flex-wrap justify-center md:justify-start gap-4 text-xs font-bold uppercase tracking-wider text-espresso/60">
               <div className="flex items-center gap-2 px-4 py-2 bg-espresso/5 rounded-full border border-espresso/5">
                 <div className="w-1.5 h-1.5 rounded-full bg-terracota" />
                 <span>+25 Anos de Experiência</span>
@@ -809,7 +781,7 @@ const AboutMentor = () => {
                 <div className="w-1.5 h-1.5 rounded-full bg-malva" />
                 <span>Milhares de Alunas</span>
               </div>
-            </motion.div>
+            </div>
           </div>
 
         </div>
@@ -838,20 +810,13 @@ const FAQ = () => {
                 className="w-full flex items-center justify-between py-2 text-left"
               >
                 <span className="font-bold text-sm uppercase italic text-espresso">{item.q}</span>
-                <ChevronDown className={`w-4 h-4 transition-transform text-espresso/40 ${open === i ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 text-espresso/40 ${open === i ? 'rotate-180' : ''}`} />
               </button>
-              <AnimatePresence>
-                {open === i && (
-                  <motion.div 
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    className="overflow-hidden"
-                  >
-                    <p className="text-xs text-espresso/60 py-4 leading-relaxed">{item.a}</p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {open === i && (
+                <div className="overflow-hidden">
+                  <p className="text-xs text-espresso/60 py-4 leading-relaxed">{item.a}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -864,8 +829,8 @@ const Footer = () => (
   <footer className="py-16 bg-parchment border-t border-espresso/5">
     <div className="max-w-4xl mx-auto px-6 text-center">
       <div className="flex justify-center gap-8 mb-8 text-[10px] font-bold uppercase tracking-widest text-espresso/40">
-        <button onClick={() => handleRedirect('#')} className="hover:text-terracota transition-colors">Privacidade</button>
-        <button onClick={() => handleRedirect('#')} className="hover:text-terracota transition-colors">Termos</button>
+        <button onClick={() => handleRedirect('#')} className="hover:text-terracota">Privacidade</button>
+        <button onClick={() => handleRedirect('#')} className="hover:text-terracota">Termos</button>
       </div>
       
       <div className="space-y-4 text-[10px] md:text-[11px] text-espresso/50 leading-relaxed max-w-2xl mx-auto">
@@ -899,22 +864,17 @@ const FloatingScarcity = () => {
     return () => clearInterval(timer);
   }, []);
 
+  if (!show) return null;
+
   return (
-    <AnimatePresence>
-      {show && (
-        <motion.div 
-          initial={{ x: -20, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -20, opacity: 0 }}
-          className="fixed bottom-6 left-6 z-50 bg-white border border-terracota/20 p-4 rounded-lg shadow-xl flex items-center gap-3"
-        >
-          <div className="w-2 h-2 bg-terracota rounded-full animate-pulse" />
-          <p className="text-[10px] font-bold uppercase italic tracking-tight text-espresso">
-            {name} acabou de garantir o acesso
-          </p>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <div 
+      className="fixed bottom-6 left-6 z-50 bg-white border border-terracota/20 p-4 rounded-lg shadow-xl flex items-center gap-3"
+    >
+      <div className="w-2 h-2 bg-terracota rounded-full" />
+      <p className="text-[10px] font-bold uppercase italic tracking-tight text-espresso">
+        {name} acabou de garantir o acesso
+      </p>
+    </div>
   );
 };
 
